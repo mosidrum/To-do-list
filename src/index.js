@@ -16,18 +16,13 @@ const toDoList = [
     description: 'Go to the shopping mall',
     completed: true,
   },
-]
+];
 
-  const holder = document.querySelector('.list');
-  const displayList = toDoList.map((list) => `
+const holder = document.querySelector('.list');
+const displayList = toDoList.map((list) => `
   <li><input type="checkbox">
     <p>${list.description}</p>
     <i class="fa-solid fa-ellipsis-vertical"></i>
   </li>
     `).join('');
-  holder.innerHTML = displayList
-
-
-
-
- 
+holder.innerHTML = displayList;
