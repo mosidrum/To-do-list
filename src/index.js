@@ -1,19 +1,28 @@
-import _ from 'lodash';
-// import printMe from './print.js';
 import './style.css';
 
- function component() {
-   const element = document.createElement('div');
-  const btn = document.createElement('button');
+const toDoList = [
+  {
+    index: 1,
+    description: 'Say my prayers',
+    completed: true,
+  },
+  {
+    index: 2,
+    description: 'Cook favorite meal',
+    completed: true,
+  },
+  {
+    index: 3,
+    description: 'Go to the shopping mall',
+    completed: true,
+  },
+];
 
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-
-   return element;
- }
-
- document.body.appendChild(component());
+const holder = document.querySelector('.list');
+const displayList = toDoList.map((list) => `
+  <li><input type="checkbox">
+    <p>${list.description}</p>
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </li>
+    `).join('');
+holder.innerHTML = displayList;
