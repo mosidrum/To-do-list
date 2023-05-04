@@ -34,6 +34,13 @@
   margin-right: 10px;
 }
 
+ul li p {
+  position: absolute;
+  font-size: 22px;
+  margin-left: 40px;
+  width: 100%;
+}
+
 .heading p {
   font-size: 25px;
 }
@@ -111,11 +118,4 @@ ul .list li {
 
 .fa-ellipsis-vertical:hover {
   cursor: move;
-}
-
-ul li p {
-  position: absolute;
-  font-size: 22px;
-  margin-left: 40px;
-  width: 100%;
 }
