@@ -20,8 +20,10 @@ const toDoList = [
 
 const holder = document.querySelector('.list');
 const displayList = toDoList.map((list) => `
-  <li><input type="checkbox">
+  <li>
+    <input type="checkbox">
     <p>${list.description}</p>
+    <i class="fa fa-circle-xmark" style="color: #93969a;"></i>
     <i class="fa-solid fa-ellipsis-vertical"></i>
   </li>
     `).join('');

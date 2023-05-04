@@ -1,9 +1,21 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --ground: rgb(181, 183, 181);
+  --done: rgb(234, 240, 234);
+  --border: black;
+}
+
+
+body {
+  font-family: 'Figtree', sans-serif;
 }
 
 .todo-container {
@@ -14,7 +26,7 @@
   justify-content: center;
   margin: 0 auto;
   width: 40%;
-  background: rgb(213, 216, 213);
+  background: var(--ground);
   padding: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 1px 50px 100px -20px, rgba(0, 0, 0, 0.3) 1px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 6px 1px inset;
 }
@@ -55,10 +67,15 @@ ul li p {
   margin-bottom: 25px;
 }
 
+.enter-text button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  background-color: var(--ground);
+}
+
 .enter-text .fa-circle-arrow-left {
-  position: absolute;
   font-size: 40px;
-  right: 1px;
 }
 
 .enter-text .fa-circle-arrow-left:hover {
@@ -78,6 +95,16 @@ ul .clear {
   font-size: 18px;
 }
 
+.fa-circle-xmark {
+  font-size: 30px;
+  position: absolute;
+  right: 40px;
+}
+
+.fa-circle-xmark:hover {
+  cursor: pointer;
+}
+
 ul .clear:hover {
   cursor: pointer;
 }
@@ -87,7 +114,7 @@ ul .clear:hover {
 }
 
 ul .list {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--border);
 }
 
 ul .text {
@@ -106,6 +133,7 @@ ul li input[type=checkbox] {
 
 ul .list li {
   display: flex;
+  list-style-type: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -113,7 +141,15 @@ ul .list li {
   margin-right: 8px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--border);
+  text-decoration-line: underline;
+}
+
+.list li.done {
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: var(--done);
+  text-decoration-line: line-through;
 }
 
 .fa-ellipsis-vertical:hover {
