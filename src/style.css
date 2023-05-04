@@ -1,3 +1,118 @@
-body {
-  background-color: rgb(220, 225, 225);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.todo-container {
+  position: relative;
+  top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 40%;
+  background: rgb(213, 216, 213);
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 6px 2px;
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.heading .fa-arrows-rotate {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.heading p {
+  font-size: 25px;
+}
+
+.enter-text {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.enter-text .fa-circle-arrow-left {
+  position: absolute;
+  font-size: 40px;
+  right: 1px;
+}
+
+.enter-text .fa-circle-arrow-left:hover {
+  cursor: pointer;
+}
+
+ul {
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul .clear {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+ul .clear:hover {
+  cursor: pointer;
+}
+
+.fa-circle-up-left {
+  display: none;
+}
+
+ul .list {
+  border-bottom: 1px solid black;
+}
+
+ul .text {
+  width: 90%;
+  height: 30px;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+ul li input[type=checkbox] {
+  transform: scale(1.2);
+}
+
+ul .list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  margin-right: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid black;
+}
+
+.fa-ellipsis-vertical:hover {
+  cursor: move;
+}
+
+ul li p{
+  position: absolute;
+  font-size: 22px;
+  margin-left: 40px;
+  width: 100%;
 }
