@@ -10,37 +10,36 @@ const todoList = document.querySelector('.todo');
 const clear = document.querySelector('.clear');
 const refresh = document.querySelector('.fa-arrows-rotate');
 
-let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 if (localStorage.getItem('tasks')) {
   tasks.map((task) => {
-    createTask(task)
-  })
+    createTask(task);
+  });
 }
 
 if (localStorage.length === 0) {
   clear.style.display = 'none';
 }
 
-refresh.addEventListener('click', (e)=> {
+refresh.addEventListener('click', (e) => {
   e.preventDefault();
   location.reload();
-})
+});
 
 todoForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  addTask(tasks,mainInput,todoForm)
-})
+  addTask(tasks, mainInput, todoForm);
+});
 
-todoList.addEventListener('click',(e) => {
-  if(e.target.classList.contains('fa-times')){
+todoList.addEventListener('click', (e) => {
+  if (e.target.classList.contains('fa-times')) {
     const taskId = e.target.closest('li').id;
-    removeTask(taskId,tasks);
-  };
-  
-})
+    removeTask(taskId, tasks);
+  }
+});
 
 todoList.addEventListener('input', (e) => {
   const taskId = e.target.closest('li').id;
   updateTask(taskId, e.target, tasks);
-})
+});

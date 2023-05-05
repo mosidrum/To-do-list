@@ -1,23 +1,23 @@
-import createTask from "./display.js";
+import createTask from './display.js';
 
-const addTask = (tasks, mainInput,todoForm) => {
+const addTask = (tasks, mainInput, todoForm) => {
   const userInput = mainInput.value;
 
-  if( userInput === ''){
-    return
+  if (userInput === '') {
+    return;
   }
 
   const task = {
     name: userInput,
     isCompleted: false,
-  }
-  tasks.push(task) 
+  };
+  tasks.push(task);
   task.id = tasks.indexOf(task) + 1;
-  localStorage.setItem('tasks', JSON.stringify(tasks))
+  localStorage.setItem('tasks', JSON.stringify(tasks));
   createTask(task);
 
   todoForm.reset();
-  mainInput.focus(); 
-}
+  mainInput.focus();
+};
 
 export default addTask;

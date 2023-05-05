@@ -3,8 +3,8 @@ const createTask = (task) => {
   const taskEl = document.createElement('li');
   taskEl.setAttribute('id', task.id);
 
-  if(task.isCompleted) {
-    taskEl.classList.add('complete')
+  if (task.isCompleted) {
+    taskEl.classList.add('complete');
   }
 
   const taskElMarkup = `
@@ -19,5 +19,5 @@ const createTask = (task) => {
 
   taskEl.innerHTML = taskElMarkup;
   container.appendChild(taskEl);
-}
+};
 export default createTask;
