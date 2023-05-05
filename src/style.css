@@ -48,6 +48,10 @@ body {
   margin-right: 10px;
 }
 
+.heading .fa-arrows-rotate:hover {
+  cursor: pointer;
+}
+
 .heading p {
   font-size: 25px;
 }
@@ -88,7 +92,6 @@ ul .clear {
   padding: 20px;
   margin-top: 10px;
   font-size: 18px;
-  display: block;
 }
 
 .fa-circle-xmark {
@@ -121,7 +124,6 @@ ul .text {
   border-radius: 10px;
   font-style: italic;
   border: none;
-  outline: none;
 }
 
 .fa-times {
@@ -152,8 +154,8 @@ ul .text {
 
 }
 
-.todo li.complete {
-  background-color: aqua;
+.todo .complete {
+  background-color: rgb(255, 253, 253);
   text-decoration: line-through;
   color: rgb(0, 0, 0);
 }
