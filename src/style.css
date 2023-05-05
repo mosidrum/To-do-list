@@ -11,6 +11,8 @@
   --ground: rgb(181, 183, 181);
   --done: rgb(234, 240, 234);
   --border: black;
+  --item: rgb(196, 191, 191);
+  --edit: #ece5e5;
 }
 
 
@@ -44,13 +46,6 @@ body {
 .heading .fa-arrows-rotate {
   font-size: 20px;
   margin-right: 10px;
-}
-
-ul li p {
-  position: absolute;
-  font-size: 22px;
-  margin-left: 40px;
-  width: 100%;
 }
 
 .heading p {
@@ -93,6 +88,7 @@ ul .clear {
   padding: 20px;
   margin-top: 10px;
   font-size: 18px;
+  display: block;
 }
 
 .fa-circle-xmark {
@@ -101,8 +97,12 @@ ul .clear {
   right: 40px;
 }
 
-.fa-circle-xmark:hover {
+.fa-times:hover {
   cursor: pointer;
+}
+
+.fa-times:active {
+  transform: scale(.8);
 }
 
 ul .clear:hover {
@@ -113,45 +113,79 @@ ul .clear:hover {
   display: none;
 }
 
-ul .list {
-  border-bottom: 1px solid var(--border);
-}
-
 ul .text {
   width: 90%;
   height: 30px;
-  font-size: 20px;
-  padding: 20px;
+  font-size: 24px;
+  padding: 25px;
   border-radius: 10px;
   font-style: italic;
   border: none;
+  outline: none;
 }
 
-ul li input[type=checkbox] {
-  transform: scale(1.2);
+.fa-times {
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }
 
-ul .list li {
+
+.todo {
+  margin-bottom: 40px;
+}
+
+.todo li {
+  background-color: var(--item);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 15px 10px;
   display: flex;
-  list-style-type: none;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5px;
-  margin-right: 8px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid var(--border);
-  text-decoration-line: underline;
 }
 
-.list li.done {
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: var(--done);
-  text-decoration-line: line-through;
+.todo li div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
 }
 
-.fa-ellipsis-vertical:hover {
-  cursor: move;
+.todo li.complete {
+  background-color: aqua;
+  text-decoration: line-through;
+  color: rgb(0, 0, 0);
+}
+
+input[type="checkbox"] {
+  width: 25px;                        
+  height: 25px;
+}
+
+input[type="checkbox"]:checked {
+  width: 25px;                        
+  height: 25px;                       
+  clip-path: circle(40% at 50% 50%);
+}
+
+.todo li button {
+  border: none;
+  font-size: 24px;
+  background-color: var(--item);
+}
+
+.todo li span {
+  border: none;
+  padding: 4px;
+  transition: var(--edit);
+}
+
+.todo li span:focus {
+  border: 1px solid var(--edit);
+  background: var(--edit);
+}
+
+.todo li span[contenteditable]:hover {
+  background: var(--edit);
 }
