@@ -13,7 +13,7 @@ const refresh = document.querySelector('.fa-arrows-rotate');
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 if (localStorage.getItem('tasks')) {
-  tasks.map((task) =>  createTask(task));
+  tasks.map((task) => createTask(task));
   /* eslint no-useless-return: "error" */
 }
 
