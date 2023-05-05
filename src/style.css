@@ -99,6 +99,12 @@ ul .clear {
   right: 40px;
 }
 
+.fa-times {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
 .fa-times:hover {
   cursor: pointer;
 }
@@ -123,12 +129,6 @@ ul .text {
   border-radius: 10px;
   font-style: italic;
   border: none;
-}
-
-.fa-times {
-  width: 20px;
-  height: 20px;
-  text-align: center;
 }
 
 .todo {
