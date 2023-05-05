@@ -16,7 +16,6 @@ if (localStorage.getItem('tasks')) {
   tasks.map((task) => {
     createTask(task);
     /* eslint no-useless-return: "error" */
-    return;
   });
 }
 
