@@ -15,6 +15,7 @@ const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 if (localStorage.getItem('tasks')) {
   tasks.map((task) => {
     createTask(task);
+    return
   });
 }
 
@@ -24,7 +25,7 @@ if (localStorage.length === 0) {
 
 refresh.addEventListener('click', (e) => {
   e.preventDefault();
-  location.reload();
+  window.location.reload();
 });
 
 todoForm.addEventListener('submit', (e) => {

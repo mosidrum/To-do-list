@@ -5,10 +5,10 @@ export const updateIds = (tasks) => {
     id: index + 1,
   }));
   localStorage.setItem('tasks', JSON.stringify(newTasks));
-  console.log(newTasks);
 };
 
 export const updateTask = (taskId, el, tasks) => {
+  // eslint-disable-next-line
   const task = tasks.find((task) => task.id === parseInt(taskId));
   if (el.hasAttribute('contenteditable')) {
     task.name = el.textContent;
