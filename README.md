@@ -95,6 +95,7 @@ To run the project, install webpack and execute the following command:
 - [ ] **[Media Responsiveness]**
 - [ ] **[HTML CSS JS]**
 - [ ] **[Javascript Es6]**
+- [ ] **[Interactive Web App]**
 - [ ] **[Javascript Modules]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
