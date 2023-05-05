@@ -15,7 +15,7 @@ const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 if (localStorage.getItem('tasks')) {
   tasks.map((task) => {
     createTask(task);
-    return
+    /* eslint no-useless-return: "error" */
   });
 }
 
