@@ -17,22 +17,22 @@ if (localStorage.getItem('tasks')) {
   /* eslint no-useless-return: "error" */
 }
 
-if(tasks < 1) {
-  clear.style.display = "none";
+if (tasks < 1) {
+  clear.style.display = 'none';
 } else {
   clear.style.display = 'block';
 }
 
 todoList.addEventListener('keydown', (e) => {
-  if(e.keyCode === 13) {
+  if (e.keyCode === 13) {
     e.preventDefault();
   }
-})
+});
 
 clear.addEventListener('click', (e) => {
   e.preventDefault();
   removeCompletedTask(tasks);
-})
+});
 
 refresh.addEventListener('click', (e) => {
   e.preventDefault();

@@ -1,4 +1,3 @@
-import createTask from './display.js';
 import { updateIds } from './update.js';
 
 export const removeTask = (taskId, tasks) => {
@@ -10,8 +9,8 @@ export const removeTask = (taskId, tasks) => {
 };
 
 export const removeCompletedTask = (tasks) => {
-  const completeTasks = tasks.filter((task )=> !task.isCompleted);
+  const completeTasks = tasks.filter((task) => !task.isCompleted);
   localStorage.setItem('tasks', JSON.stringify(completeTasks));
   updateIds(completeTasks);
   window.location.reload();
-}
+};
