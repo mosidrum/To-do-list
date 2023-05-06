@@ -124,5 +124,6 @@
     "url": "https://github.com/mosidrum/webpack-boilerplate/issues"
   },
   "homepage": "https://mosidrum.github.io/Todo-list",
-  "description": ""
+  "description": "",
+  "main": "index.js"
 }
