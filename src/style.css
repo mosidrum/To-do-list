@@ -91,6 +91,7 @@ ul .clear {
   padding: 20px;
   margin-top: 10px;
   font-size: 18px;
+  display: block;
 }
 
 .fa-circle-xmark {
