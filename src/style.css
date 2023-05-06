@@ -1,9 +1,22 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --ground: rgb(181, 183, 181);
+  --done: rgb(234, 240, 234);
+  --border: black;
+  --item: rgb(196, 191, 191);
+  --edit: #ece5e5;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
 }
 
 .todo-container {
@@ -14,7 +27,7 @@
   justify-content: center;
   margin: 0 auto;
   width: 40%;
-  background: rgb(213, 216, 213);
+  background: var(--ground);
   padding: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 1px 50px 100px -20px, rgba(0, 0, 0, 0.3) 1px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 6px 1px inset;
 }
@@ -34,11 +47,8 @@
   margin-right: 10px;
 }
 
-ul li p {
-  position: absolute;
-  font-size: 22px;
-  margin-left: 40px;
-  width: 100%;
+.heading .fa-arrows-rotate:hover {
+  cursor: pointer;
 }
 
 .heading p {
@@ -55,10 +65,15 @@ ul li p {
   margin-bottom: 25px;
 }
 
+.enter-text button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  background-color: var(--ground);
+}
+
 .enter-text .fa-circle-arrow-left {
-  position: absolute;
   font-size: 40px;
-  right: 1px;
 }
 
 .enter-text .fa-circle-arrow-left:hover {
@@ -78,6 +93,26 @@ ul .clear {
   font-size: 18px;
 }
 
+.fa-circle-xmark {
+  font-size: 30px;
+  position: absolute;
+  right: 40px;
+}
+
+.fa-times {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.fa-times:hover {
+  cursor: pointer;
+}
+
+.fa-times:active {
+  transform: scale(0.8);
+}
+
 ul .clear:hover {
   cursor: pointer;
 }
@@ -86,36 +121,70 @@ ul .clear:hover {
   display: none;
 }
 
-ul .list {
-  border-bottom: 1px solid black;
-}
-
 ul .text {
   width: 90%;
   height: 30px;
-  font-size: 20px;
-  padding: 20px;
+  font-size: 24px;
+  padding: 25px;
   border-radius: 10px;
   font-style: italic;
   border: none;
 }
 
-ul li input[type=checkbox] {
-  transform: scale(1.2);
+.todo {
+  margin-bottom: 40px;
 }
 
-ul .list li {
+.todo li {
+  background-color: var(--item);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 15px 10px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 5px;
-  margin-right: 8px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid black;
 }
 
-.fa-ellipsis-vertical:hover {
-  cursor: move;
+.todo li div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.todo .complete {
+  background-color: rgb(255, 253, 253);
+  text-decoration: line-through;
+  color: rgb(0, 0, 0);
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+
+input[type="checkbox"]:checked {
+  width: 25px;
+  height: 25px;
+  clip-path: circle(40% at 50% 50%);
+}
+
+.todo li button {
+  border: none;
+  font-size: 24px;
+  background-color: var(--item);
+}
+
+.todo li span {
+  border: none;
+  padding: 4px;
+  transition: var(--edit);
+}
+
+.todo li span:focus {
+  border: 1px solid var(--edit);
+  background: var(--edit);
+}
+
+.todo li span[contenteditable]:hover {
+  background: var(--edit);
 }
