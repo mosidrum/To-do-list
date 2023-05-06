@@ -1,6 +1,6 @@
 import addTask from '../module/adding.js';
 import createTask from '../module/display.js';
-import removeTask from '../module/removing.js';
+import { removeCompletedTask, removeTask } from '../module/removing.js';
 import { updateTask } from '../module/update.js';
 import './style.css';
 
@@ -17,9 +17,22 @@ if (localStorage.getItem('tasks')) {
   /* eslint no-useless-return: "error" */
 }
 
-if (localStorage.length === 0) {
+if (tasks < 1) {
   clear.style.display = 'none';
+} else {
+  clear.style.display = 'block';
 }
+
+todoList.addEventListener('keydown', (e) => {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+  }
+});
+
+clear.addEventListener('click', (e) => {
+  e.preventDefault();
+  removeCompletedTask(tasks);
+});
 
 refresh.addEventListener('click', (e) => {
   e.preventDefault();
