@@ -2,7 +2,7 @@ import addTask from '../module/adding.js';
 import createTask from '../module/display.js';
 import { removeCompletedTask, removeTask } from '../module/removing.js';
 import { updateTask } from '../module/update.js';
-import './style.css';
+import './/style.css';
 
 const todoForm = document.querySelector('.enter-text');
 const mainInput = document.querySelector('.text');
