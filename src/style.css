@@ -1,10 +1,194 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
 
-.todo-container{
-  width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+:root {
+  --ground: rgb(181, 183, 181);
+  --done: rgb(234, 240, 234);
+  --border: black;
+  --item: rgb(196, 191, 191);
+  --edit: #ece5e5;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+}
+
+.todo-container {
+  position: relative;
+  padding: 60px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  background: var(--ground);
+  box-shadow: rgba(50, 50, 93, 0.25) 1px 50px 100px -20px, rgba(0, 0, 0, 0.3) 1px 30px 60px -30px, rgba(10, 37, 64, 0.35) 1px -2px 6px 1px inset;
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.heading .fa-arrows-rotate {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.heading .fa-arrows-rotate:hover {
+  cursor: pointer;
+}
+
+.heading p {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.enter-text {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.enter-text button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  background-color: var(--ground);
+}
+
+.enter-text .fa-circle-arrow-left {
+  font-size: 40px;
+}
+
+.enter-text .fa-circle-arrow-left:hover {
+  cursor: pointer;
+}
+
+ul {
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul .clear {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+  display: block;
+}
+
+.fa-circle-xmark {
+  font-size: 30px;
+  position: absolute;
+  right: 40px;
+}
+
+.fa-times {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.fa-times:hover {
+  cursor: pointer;
+}
+
+.fa-times:active {
+  transform: scale(0.8);
+}
+
+ul .clear:hover {
+  cursor: pointer;
+}
+
+.fa-circle-up-left {
+  display: none;
+}
+
+ul .text {
+  width: 90%;
+  height: 30px;
+  font-size: 24px;
+  padding: 25px;
+  border-radius: 10px;
+  font-style: italic;
+  border: none;
+}
+
+.todo {
+  margin-bottom: 40px;
+}
+
+.todo li {
+  background-color: var(--item);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo li div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.todo .complete {
+  background-color: rgb(255, 253, 253);
+  text-decoration: line-through;
+  color: rgb(0, 0, 0);
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+
+input[type="checkbox"]:checked {
+  width: 25px;
+  height: 25px;
+  clip-path: circle(40% at 50% 50%);
+}
+
+.todo li button {
+  border: none;
+  font-size: 24px;
+  background-color: var(--item);
+}
+
+.todo li span {
+  border: none;
+  padding: 4px;
+  transition: var(--edit);
+}
+
+.todo li span:focus {
+  border: 1px solid var(--edit);
+  background: var(--edit);
+}
+
+.todo li span[contenteditable]:hover {
+  background: var(--edit);
+}
 
 @media only screen and (min-width: 768px) {
   * {
