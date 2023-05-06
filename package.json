@@ -48,6 +48,7 @@
     "fastest-levenshtein": "^1.0.16",
     "find-up": "^4.1.0",
     "function-bind": "^1.1.1",
+    "gh-pages": "^5.0.0",
     "glob-to-regexp": "^0.4.1",
     "graceful-fs": "^4.2.11",
     "has": "^1.0.3",
@@ -106,7 +107,7 @@
     "wildcard": "^2.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "server": "node server.js",
@@ -114,14 +115,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mercymugambi/webpack-project.git"
+    "url": "git+https://github.com/mosidrum/webpack-boilerplate.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mercymugambi/webpack-project/issues"
+    "url": "https://github.com/mosidrum/webpack-boilerplate/issues"
   },
-  "homepage": "https://github.com/mercymugambi/webpack-project#readme",
+  "homepage": "https://mosidrum.github.io/Todo-list",
   "description": ""
 }
