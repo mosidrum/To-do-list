@@ -18,7 +18,6 @@ const addTask = (tasks, mainInput, todoForm) => {
 
   todoForm.reset();
   mainInput.focus();
-  window.location.reload();
 };
 
 export default addTask;
