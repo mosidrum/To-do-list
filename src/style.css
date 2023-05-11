@@ -211,11 +211,12 @@ input[type="checkbox"]:checked {
 
   .todo-container {
     position: relative;
-    top: 100px;
+    top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 50px;
     width: 40%;
     background: var(--ground);
     padding: 10px;
